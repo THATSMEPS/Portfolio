@@ -39,18 +39,7 @@ export const ProjectsSection = () => {
     <div className="relative w-full h-screen overflow-hidden">
       {/* 3D Background */}
       <div className="absolute inset-0 z-0">
-        <Scene3D>
-          {projects.map((project, index) => (
-            <FloatingCard
-              key={index}
-              position={project.position}
-              title={project.title}
-              description={project.description}
-              image={project.image}
-              scale={1.2}
-            />
-          ))}
-        </Scene3D>
+        <Scene3D />
       </div>
 
       {/* Project Details Overlay */}

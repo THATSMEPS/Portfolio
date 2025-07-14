@@ -3,7 +3,7 @@ import { OrbitControls, PerspectiveCamera, Environment } from '@react-three/drei
 import { Suspense } from 'react'
 
 interface Scene3DProps {
-  children: React.ReactNode
+  children?: React.ReactNode
   enableControls?: boolean
   cameraPosition?: [number, number, number]
 }

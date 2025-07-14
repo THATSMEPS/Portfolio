@@ -38,18 +38,7 @@ export const ExperienceSection = () => {
     <div className="relative w-full h-screen overflow-hidden">
       {/* 3D Background */}
       <div className="absolute inset-0 z-0">
-        <Scene3D>
-          {experiences.map((exp, index) => (
-            <FloatingCard
-              key={index}
-              position={exp.position}
-              title={exp.title}
-              description={exp.company}
-              image={exp.image}
-              scale={1.3}
-            />
-          ))}
-        </Scene3D>
+        <Scene3D />
       </div>
 
       {/* Experience Content */}
