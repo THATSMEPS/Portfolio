@@ -2,41 +2,66 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* 3D Portfolio Design System - Modern Tech Aesthetic
+All colors MUST be HSL. */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Dark space theme for 3D portfolio */
+    --background: 220 30% 5%;
+    --foreground: 210 40% 98%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 220 30% 8%;
+    --card-foreground: 210 40% 98%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 220 30% 8%;
+    --popover-foreground: 210 40% 98%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Tech-inspired primary colors */
+    --primary: 210 100% 50%;
+    --primary-foreground: 220 30% 5%;
+    --primary-glow: 210 100% 60%;
+    --primary-variant: 200 100% 45%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 240 50% 15%;
+    --secondary-foreground: 210 40% 98%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 220 30% 12%;
+    --muted-foreground: 215 20% 65%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 280 100% 70%;
+    --accent-foreground: 220 30% 5%;
 
-    --destructive: 0 84.2% 60.2%;
+    --destructive: 0 75% 60%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 220 30% 18%;
+    --input: 220 30% 15%;
+    --ring: 210 100% 50%;
 
-    --radius: 0.5rem;
+    /* Custom 3D Portfolio colors */
+    --neon-blue: 210 100% 50%;
+    --neon-purple: 280 100% 70%;
+    --neon-cyan: 180 100% 50%;
+    --tech-orange: 25 100% 60%;
+    --success-green: 120 60% 50%;
+
+    /* Gradients for 3D effects */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--accent)) 50%, hsl(var(--neon-cyan)) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(var(--card)) 0%, hsl(var(--muted)) 100%);
+    --gradient-glow: radial-gradient(circle, hsl(var(--primary) / 0.3) 0%, transparent 70%);
+
+    /* Shadows for depth */
+    --shadow-glow: 0 0 40px hsl(var(--primary) / 0.4);
+    --shadow-neon: 0 0 20px hsl(var(--accent) / 0.6), 0 0 40px hsl(var(--accent) / 0.4);
+    --shadow-card: 0 10px 30px -10px hsl(var(--primary) / 0.3);
+
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --radius: 0.75rem;
 
     --sidebar-background: 0 0% 98%;
 
