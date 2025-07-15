@@ -3,6 +3,7 @@ import { Scene3D } from './Scene3D'
 import { FloatingCard } from './FloatingCard'
 import { Calendar, MapPin, ExternalLink } from 'lucide-react'
 import internshipImage from '@/assets/internship-rebel.jpg'
+import jc from '@/assets/jc.png'
 
 const experiences = [
   {
@@ -22,7 +23,7 @@ const experiences = [
     title: 'Web Development Intern',
     company: 'Jarurat Care Foundation, Mumbai', 
     period: 'January 2025 - May 2025',
-    image: internshipImage,
+    image: jc,
     achievements: [
       'Contributed to chatbot backend for cancer patient accessibility',
       'Redesigned UI components using Figma-based designs',
@@ -72,7 +73,7 @@ export const ExperienceSection = () => {
                   <img 
                     src={exp.image} 
                     alt={exp.title}
-                    className="w-full h-full object-cover"
+                    className={`w-full h-full ${exp.title === 'Web Development Intern' ? 'object-contain' : 'object-cover'}`}
                   />
                 </div>
 

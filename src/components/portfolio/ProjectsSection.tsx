@@ -59,26 +59,28 @@ export const ProjectsSection = () => {
             Featured Projects
           </motion.h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
             {projects.map((project, index) => (
               <motion.div
                 key={index}
-                className="bg-card/80 backdrop-blur-sm border border-border rounded-xl p-6 hover:border-primary transition-all duration-300 group"
+                className="bg-card/80 backdrop-blur-sm border border-border rounded-2xl p-8 hover:border-primary transition-all duration-300 group shadow-xl"
+                style={{ minHeight: '480px' }}
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.3 + index * 0.1 }}
-                whileHover={{ y: -10, boxShadow: "var(--shadow-glow)" }}
+                whileHover={{ y: -14, boxShadow: "var(--shadow-glow)" }}
               >
-                <div className="aspect-video rounded-lg overflow-hidden mb-4 group-hover:scale-105 transition-transform duration-300">
+                <div className="w-full rounded-2xl overflow-hidden mb-6 group-hover:scale-105 transition-transform duration-300" style={{ height: '240px', maxHeight: '320px' }}>
                   <img 
                     src={project.image} 
                     alt={project.title}
                     className="w-full h-full object-cover"
+                    style={{ minHeight: '100%', minWidth: '100%' }}
                   />
                 </div>
 
-                <h3 className="text-xl font-bold mb-2 text-foreground">{project.title}</h3>
-                <p className="text-muted-foreground mb-4">{project.details}</p>
+                <h3 className="text-2xl font-bold mb-3 text-foreground">{project.title}</h3>
+                <p className="text-base text-muted-foreground mb-5">{project.details}</p>
 
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.tech.map((tech, techIndex) => (

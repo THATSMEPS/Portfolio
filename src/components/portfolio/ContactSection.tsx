@@ -87,7 +87,7 @@ export const ContactSection = () => {
                   <ContactItem
                     icon={MapPin}
                     title="Location"
-                    value="Gandhinagar, Gujarat, India"
+                    value="Ahmedabad, Gujarat, India"
                   />
                 </div>
               </div>
