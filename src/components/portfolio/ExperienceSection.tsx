@@ -97,15 +97,28 @@ export const ExperienceSection = () => {
                     </li>
                   ))}
                 </ul>
-
-                <motion.button
-                  className="w-full bg-gradient-primary text-primary-foreground py-2 px-4 rounded-lg hover:shadow-glow transition-all duration-300 flex items-center justify-center gap-2"
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
-                >
-                  View Details
-                  <ExternalLink size={14} />
-                </motion.button>
+                {exp.title === 'Web Development Intern' ? (
+                  <motion.a
+                    href="https://www.linkedin.com/posts/pratham-shah-392107268_internship-completed-activity-7330231060707872768-0Wbr?"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full bg-gradient-primary text-primary-foreground py-2 px-4 rounded-lg hover:shadow-glow transition-all duration-300 flex items-center justify-center gap-2"
+                    whileHover={{ scale: 1.02 }}
+                    whileTap={{ scale: 0.98 }}
+                  >
+                    View Details
+                    <ExternalLink size={14} />
+                  </motion.a>
+                ) : (
+                  <motion.button
+                    className="w-full bg-gradient-primary text-primary-foreground py-2 px-4 rounded-lg hover:shadow-glow transition-all duration-300 flex items-center justify-center gap-2"
+                    whileHover={{ scale: 1.02 }}
+                    whileTap={{ scale: 0.98 }}
+                  >
+                    View Details
+                    <ExternalLink size={14} />
+                  </motion.button>
+                )}
               </motion.div>
             ))}
           </div>

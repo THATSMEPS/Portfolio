@@ -4,7 +4,7 @@ import { ParticleField } from './ParticleField'
 import { RotatingGeometry } from './RotatingGeometry'
 import { Button } from '@/components/ui/button'
 import { Github, Linkedin, Mail, Phone, ExternalLink } from 'lucide-react'
-import heroImage from '@/assets/hero-bg.jpg'
+import heroImage from '@/assets/hero-bg.png'
 
 interface HeroSectionProps {
   onNavigate: (section: string) => void
@@ -12,7 +12,7 @@ interface HeroSectionProps {
 
 export const HeroSection = ({ onNavigate }: HeroSectionProps) => {
   return (
-    <div className="relative w-full h-screen overflow-hidden">
+    <div className="relative w-full min-h-screen overflow-hidden py-16 md:py-24">
       {/* 3D Background */}
       <div className="absolute inset-0 z-0">
         <Scene3D cameraPosition={[0, 0, 8]}>
@@ -24,17 +24,17 @@ export const HeroSection = ({ onNavigate }: HeroSectionProps) => {
       </div>
 
       {/* Hero Content */}
-      <div className="relative z-10 flex items-center justify-center h-full">
-        <div className="container mx-auto px-6 text-center">
+      <div className="relative z-10 flex items-center justify-center min-h-[60vh]">
+        <div className="container max-w-3xl md:max-w-4xl mx-auto px-4 md:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.2 }}
-            className="max-w-4xl mx-auto"
+            className="mx-auto"
           >
             {/* Profile Image */}
             <motion.div
-              className="w-32 h-32 mx-auto mb-8 rounded-full overflow-hidden border-4 border-primary shadow-glow"
+              className="w-40 h-40 md:w-48 md:h-48 mx-auto mb-8 rounded-full overflow-hidden border-4 border-primary shadow-glow"
               initial={{ scale: 0 }}
               animate={{ scale: 1 }}
               transition={{ duration: 0.8, delay: 0.5 }}
@@ -48,7 +48,7 @@ export const HeroSection = ({ onNavigate }: HeroSectionProps) => {
 
             {/* Name and Title */}
             <motion.h1
-              className="text-6xl md:text-8xl font-bold bg-gradient-hero bg-clip-text text-transparent mb-4"
+              className="text-7xl md:text-9xl font-bold bg-gradient-hero bg-clip-text text-transparent mb-4"
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, delay: 0.7 }}
@@ -57,7 +57,7 @@ export const HeroSection = ({ onNavigate }: HeroSectionProps) => {
             </motion.h1>
 
             <motion.p
-              className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto"
+              className="text-2xl md:text-3xl text-muted-foreground mb-10 max-w-2xl mx-auto"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.9 }}
@@ -67,34 +67,34 @@ export const HeroSection = ({ onNavigate }: HeroSectionProps) => {
 
             {/* CTA Buttons */}
             <motion.div
-              className="flex flex-col sm:flex-row gap-4 justify-center mb-12"
+              className="flex flex-col sm:flex-row gap-6 justify-center mb-14"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 1.1 }}
             >
               <Button
                 size="lg"
-                className="bg-gradient-primary hover:shadow-glow transition-all duration-300 group"
+                className="bg-gradient-primary text-lg px-8 py-4 hover:shadow-glow transition-all duration-300 group"
                 onClick={() => onNavigate('projects')}
               >
                 View My Work
-                <ExternalLink size={16} className="ml-2 group-hover:translate-x-1 transition-transform" />
+                <ExternalLink size={18} className="ml-2 group-hover:translate-x-1 transition-transform" />
               </Button>
               
               <Button
                 variant="outline"
                 size="lg"
-                className="border-primary hover:bg-primary/10 hover:shadow-glow transition-all duration-300"
+                className="border-primary text-lg px-8 py-4 hover:bg-primary/10 hover:shadow-glow transition-all duration-300"
                 onClick={() => onNavigate('contact')}
               >
                 Get In Touch
-                <Mail size={16} className="ml-2" />
+                <Mail size={18} className="ml-2" />
               </Button>
             </motion.div>
 
             {/* Social Links */}
             <motion.div
-              className="flex justify-center space-x-6"
+              className="flex justify-center space-x-8"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 1.3 }}
@@ -124,19 +124,6 @@ export const HeroSection = ({ onNavigate }: HeroSectionProps) => {
         </div>
       </div>
 
-      {/* Scroll Indicator */}
-      <motion.div
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-muted-foreground"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 1.5 }}
-      >
-        <div className="animate-bounce">
-          <div className="w-6 h-10 border-2 border-muted-foreground rounded-full flex justify-center">
-            <div className="w-1 h-3 bg-muted-foreground rounded-full mt-2 animate-pulse"></div>
-          </div>
-        </div>
-      </motion.div>
     </div>
   )
 }

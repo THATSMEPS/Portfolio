@@ -8,7 +8,7 @@ import { ExperienceSection } from './ExperienceSection'
 import { AchievementsSection } from './AchievementsSection'
 import { ContactSection } from './ContactSection'
 
-type Section = 'hero' | 'about' | 'experience' | 'projects' | 'achievements' | 'contact'
+type Section = 'hero' | 'about' | 'experience' | 'projects' | 'activities' | 'contact'
 
 export const Portfolio3D = () => {
   const [activeSection, setActiveSection] = useState<Section>('hero')
@@ -63,7 +63,7 @@ export const Portfolio3D = () => {
         return <ProjectsSection />
       case 'experience':
         return <ExperienceSection />
-      case 'achievements':
+      case 'activities':
         return <AchievementsSection />
       case 'contact':
         return <ContactSection />

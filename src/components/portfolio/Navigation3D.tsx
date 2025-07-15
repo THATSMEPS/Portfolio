@@ -11,7 +11,7 @@ const navigationItems = [
   { id: 'about', label: 'About', icon: User },
   { id: 'experience', label: 'Experience', icon: Briefcase },
   { id: 'projects', label: 'Projects', icon: FolderOpen },
-  { id: 'achievements', label: 'Achievements', icon: Award },
+  { id: 'activities', label: 'Activities and Achievements', icon: Award },
   { id: 'contact', label: 'Contact', icon: Mail },
 ]
 

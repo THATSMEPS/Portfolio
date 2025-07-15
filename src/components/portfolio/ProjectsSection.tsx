@@ -93,12 +93,19 @@ export const ProjectsSection = () => {
 
                 <div className="flex gap-2">
                   <Button
+                    asChild
                     size="sm"
                     variant="outline"
                     className="flex-1 border-primary hover:bg-primary/10"
                   >
-                    <Github size={14} className="mr-2" />
-                    Code
+                    <a
+                      href="https://github.com/THATSMEPS?tab=repositories"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Github size={14} className="mr-2" />
+                      Code
+                    </a>
                   </Button>
                   <Button
                     size="sm"
